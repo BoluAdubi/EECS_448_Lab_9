@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<script src="formChecker.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<form action="customerBackend.php" name="htmlForm" method="post" onsubmit="event.preventDefault(); validateForm()">
+			<div class="account">
+				<p><strong>Create an account to purchase items:</strong><p>
+				<label for="fname">Username:<t></label>
+				<input type="username" placeholder="Type in an email" id="username" name="username"><br><br>
+				<label for="lname">Password:</label>
+				<input type="password" placeholder="Type in a password" id="password" name="password"><br><br>
+			</div>
+			<div class="items">
+				<p><strong>Add items to your cart (quantities between 0-50)</strong><p>
+
+				&nbsp;&nbsp;<input type="text" id="icecreamCount" name="icecreamCount">&nbsp;&nbsp;Ice Cream $4.50 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+
+				&nbsp;&nbsp;<input type="text" id="chipsCount" name="chipsCount">&nbsp;&nbsp;Ruffles Chips $2.50 &nbsp;</label><br>
+
+				&nbsp;&nbsp;<input type="text" id="cheetosCount" name="cheetosCount">&nbsp;&nbsp;Hot Cheetos $2.50 &nbsp;&nbsp;&nbsp;</label><br>
+
+			  &nbsp;&nbsp;<input type="text" id="ramenCount" name="ramenCount">&nbsp;&nbsp;Ramen $1.50 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label><br>
+			</div>
+			<div class="shipping">
+				<p><strong>Choose a shipping option:</strong><p>
+				<label>
+				  <input type="radio" name="shipping" value="Free 7 day">Free 7 day</label><br>
+				<label>
+				  <input type="radio" name="shipping" value="$50 over night">$50.00 over night</label><br>
+				<label>
+				  <input type="radio" name="shipping" value="$5.00 three day">$5.00 three day</label><br>
+			</div>
+			<input type="reset" onclick="resetLabels()">
+			<input type="submit">
+		</form>
+	</body>
+</HTML>
